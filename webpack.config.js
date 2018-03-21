@@ -12,25 +12,13 @@ const path = require('path');
 const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-	entry: './src/app.js',
+	entry: {
+		chartd3: './src/chartd3.js'
+    },
 
 	output: {
-		filename: '[name].bundle.js',
+		filename: '[name].js',
 		path: path.resolve(__dirname, 'dist')
-	},
-
-	module: {
-		rules: [
-			{
-				test: {},
-				exclude: /node_modules/,
-				loader: 'babel-loader',
-
-				options: {
-					presets: ['env']
-				}
-			}
-		]
 	},
 
 	plugins: [new UglifyJSPlugin()]

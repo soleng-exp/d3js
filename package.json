@@ -9,6 +9,12 @@
     "babel-preset-env": "^1.6.1",
     "d3": "^4.13.0",
     "uglifyjs-webpack-plugin": "^1.2.4",
-    "webpack": "^4.1.1"
-  }
+    "webpack": "^4.1.1",
+    "@snyk/protect": "latest"
+  },
+  "scripts": {
+    "prepare": "yarn run snyk-protect",
+    "snyk-protect": "snyk-protect"
+  },
+  "snyk": true
 }
